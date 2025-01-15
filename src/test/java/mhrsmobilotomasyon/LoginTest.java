@@ -23,6 +23,7 @@ public class LoginTest {
     By mhrsLoginLogoId = By.id("tr.gov.saglik.MHRSMOBIL:id/mhrsLogo");
     By mhrsLoginTc = By.id("tr.gov.saglik.MHRSMOBIL:id/edtTcNo");
     By mhrsloginParola = By.id("tr.gov.saglik.MHRSMOBIL:id/edtPass");
+    By mhrsLoginButton = By.id("tr.gov.saglik.MHRSMOBIL:id/btnGiris");
 
 
 
@@ -58,9 +59,11 @@ public class LoginTest {
         WebElement mhrsLoginLogo = driver.findElement(mhrsLoginLogoId);
         mhrsLoginLogo.isSelected();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.findElement(mhrsLoginTc).sendKeys("54367264940");
+        driver.findElement(mhrsLoginTc).sendKeys("11");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.findElement(mhrsloginParola).sendKeys("Aa123456.");
+        driver.findElement(mhrsloginParola).sendKeys("1.");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.findElement(mhrsLoginButton).click();
 
     }
 
