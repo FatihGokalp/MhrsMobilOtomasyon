@@ -11,12 +11,12 @@ public class LoginTest extends BaseTest {
 
     @BeforeSuite
     public void setupSuite() {
-        ExtentTestReports.afterTest();
+        ExtentTestReports.beforeTest();
     }
 
     @AfterSuite
     public void afterSuite() {
-        ExtentTestReports.beforeTest();
+        ExtentTestReports.afterTest();
     }
 
     @BeforeClass
@@ -29,9 +29,10 @@ public class LoginTest extends BaseTest {
         vatandasMobilPage
                 .loginSayfasi() //1.case
                 .loginTcSifreGirisi()//2.case
-                .loginOlma();//3
-
-        Thread.sleep(5000);
+                .loginOlma()//3.case
+                .neyimVarPopUpKontrol()//4.case
+                .neyimvarAnasayfaYonlendirme()//5.case
+                .anasayfaMhrsLogoKontrol();//6.case
     }
 
     @AfterClass

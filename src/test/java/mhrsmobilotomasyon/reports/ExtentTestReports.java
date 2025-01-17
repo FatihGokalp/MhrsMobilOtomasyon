@@ -9,7 +9,7 @@ public class ExtentTestReports {
     public static ExtentReports extent = new ExtentReports();
 
     public static void  beforeTest(){
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("MhrsMobilOtomasyon/mobilReport.html");
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("mobilReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }

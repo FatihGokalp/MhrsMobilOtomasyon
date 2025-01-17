@@ -24,7 +24,7 @@ public class VatandasMobilPage extends BasePage {
     // 2. case tckn ve sifre alanlarına veri girişi yapılır
     public  VatandasMobilPage loginTcSifreGirisi() {
         sendKeys(mhrsLoginTc,"54367264940");
-        sendKeys(mhrsloginParola,"Aa123456");
+        sendKeys(mhrsloginParola,"Aa123456.");
         passLog("Tckn ve sifre girilir.");
         failLog("Tckn ve sifre hatalı girildi. 2. case");
         return this;
@@ -35,6 +35,30 @@ public class VatandasMobilPage extends BasePage {
         click(mhrsLoginButton);
         passLog("Login butonuna tiklanir.");
         failLog("Tckn ve sifre hatalı girildi. 3. case");
+        return this;
+    }
+
+    //4.case
+    public VatandasMobilPage neyimVarPopUpKontrol() {
+        isEnabled(mhrsAnasayfaYonlendirmeButon);
+        passLog("Neyimvar Pop-up kontrol.");
+        failLog("Neyimvar Pop-up başarısız");
+        return this;
+    }
+
+    //5.case
+    public VatandasMobilPage neyimvarAnasayfaYonlendirme(){
+        click(mhrsAnasayfaYonlendirmeButon);
+        passLog("Anasayfaya başarılı şekilde yönlendirildi.");
+        failLog("Anasayfaya yönelndirme başarısız");
+        return this;
+    }
+
+    //6.case
+    public VatandasMobilPage anasayfaMhrsLogoKontrol(){
+        isEnabled(mhrsAnasayfaMhrsLogo);
+        passLog("Anasayfa basarili şekilde acildi.");
+        failLog("Anasayfa acilamadi");
         return this;
     }
 }
